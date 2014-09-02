@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Just starting in the IT field.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself. 
+Will be adding more as time goes by.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+`fccortez1 [at] hotmail.com`
