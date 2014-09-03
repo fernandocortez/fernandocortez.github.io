@@ -8,8 +8,8 @@ name: Testing Ground (f)
 # Short bio or description (displayed in the header)
 description: Testing things my way
 
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: 
+# Limits number of shown posts per page
+paginate: 10
 
 #
 # Flags below are optional
