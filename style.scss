@@ -7,27 +7,6 @@
 
 @import "bootstrap-custom";
 @import "bootswatch";
-@import "fontello";
-
-/**************/
-/* BASE RULES */
-/**************/
-
-html {
-  font-size: 100%;
-}
-
-em, i {
-  font-style: italic;
-}
-
-strong, b {
-  font-weight: bold;
-}
-
-img {
-  max-width: 100%;
-}
 
 .date {
   font-style: italic;
@@ -37,6 +16,81 @@ img {
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
+
+//
+// Navbars
+// --------------------------------------------------
+
+
+// Wrapper and base class
+//
+// Provide a static navbar from which we expand to create full-width, fixed, and
+// other navbar variations.
+
+.navbar {
+  position: relative;
+  min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+  margin-bottom: $navbar-margin-bottom;
+  border: 1px solid transparent;
+
+  // Prevent floats from breaking the navbar
+  @include clearfix();
+
+  @media (min-width: $grid-float-breakpoint) {
+    border-radius: $navbar-border-radius;
+  }
+}
+
+// Navbar heading
+//
+// Groups `.navbar-brand` and `.navbar-toggle` into a single component for easy
+// styling of responsive aspects.
+
+.navbar-header {
+  @include clearfix();
+
+  @media (min-width: $grid-float-breakpoint) {
+    float: left;
+  }
+}
+
+// Brand/project name
+
+.navbar-brand {
+  float: left;
+  padding: $navbar-padding-vertical $navbar-padding-horizontal*2;
+  font-size: $font-size-large;
+  line-height: $line-height-computed;
+  height: $navbar-height;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    .navbar > .container &,
+    .navbar > .container-fluid & {
+      margin-left: -$navbar-padding-horizontal;
+    }
+  }
+}
+
+// Default navbar
+.navbar-default {
+  background-color: $navbar-default-bg;
+  border-color: $navbar-default-border;
+
+  .navbar-brand {
+    color: $navbar-default-brand-color;
+    &:hover,
+    &:focus {
+      color: $navbar-default-brand-hover-color;
+      background-color: $navbar-default-brand-hover-bg;
+    }
+  }
+}
+
 
 //
 // .main
@@ -68,6 +122,25 @@ img {
 
   .read-more {
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: $font-size-small;
   }
+}
+
+// 
+// .sticky footer
+// 
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: floor(($font-size-base * 2.6));
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: floor(($font-size-base * 2.6));
 }
