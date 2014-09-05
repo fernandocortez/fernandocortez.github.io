@@ -12,4 +12,4 @@ Will be adding more as time goes by.
 
 ### Contact me
 
-`fccortez1 [at] hotmail.com`
+<div>{% include svg-icons.html %}</div>

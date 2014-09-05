@@ -7,7 +7,7 @@
 
 @import "bootstrap-custom";
 @import "bootswatch";
-@import "font-awesome-custom";
+@import "fontello";
 
 /**************/
 /* BASE RULES */
@@ -37,59 +37,6 @@ img {
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
-
-//
-// .banner
-//
-$banner-padding:              15px !default;
-$banner-color:                inherit !default;
-$banner-bg:                   $gray-lighter !default;
-$banner-heading-color:        inherit !default;
-$banner-font-size:            ceil(($font-size-base * 1.2)) !default;
-
-.banner {
-  padding: $banner-padding;
-  margin-bottom: $banner-padding;
-  color: $banner-color;
-  background-color: $banner-bg;
-
-  h1,
-  .h1 {
-    color: $banner-heading-color;
-  }
-  p {
-    margin-bottom: ($banner-padding / 2);
-    font-size: $banner-font-size;
-    font-weight: 200;
-  }
-
-  > hr {
-    border-top-color: darken($banner-bg, 10%);
-  }
-
-  .container & {
-    border-radius: $border-radius-large; // Only round corners at higher resolutions if contained in a container
-  }
-
-  .container {
-    max-width: 100%;
-  }
-
-  @media screen and (min-width: $screen-sm-min) {
-    padding-top:    ($banner-padding * 1.6);
-    padding-bottom: ($banner-padding * 1.6);
-
-    .container & {
-      padding-left:  ($banner-padding * 2);
-      padding-right: ($banner-padding * 2);
-    }
-
-    h1,
-    .h1 {
-      font-size: ($font-size-base * 2.5);
-    }
-  }
-}
 
 //
 // .main

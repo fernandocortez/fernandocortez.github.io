@@ -11,6 +11,9 @@
     <meta name="author" content="{{ site.name }}" />
     <meta name="description" content="{{ site.description }}">
 
+    <link rel="shortcut icon" href="{{ site.baseurl }}/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="{{ site.baseurl }}/images/favicon.ico" type="image/x-icon">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -25,11 +28,9 @@
   </head>
 
   <body>
-    <div class="banner">
+    <div class="jumbotron">
       <div class="container">
-        <ul class="list-inline pull-right">{% include svg-icons.html %}</ul>
-
-        <h1><span class="fa fa-rocket"></span>&nbsp;{{ site.name }}</h1>
+        <h1>{{ site.name }}</h1>
 
         <p>{{ site.description }}</p>
 
