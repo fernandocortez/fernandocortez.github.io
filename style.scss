@@ -58,7 +58,7 @@
 
 .navbar-brand {
   float: left;
-  padding: $navbar-padding-vertical $navbar-padding-horizontal*2;
+  padding: $navbar-padding-vertical $navbar-padding-horizontal;
   font-size: $font-size-large;
   line-height: $line-height-computed;
   height: $navbar-height;
@@ -135,12 +135,12 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: floor(($font-size-base * 2.6));
+  margin-bottom: $font-size-h1;
 }
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: floor(($font-size-base * 2.6));
+  height: $font-size-h1;
 }
