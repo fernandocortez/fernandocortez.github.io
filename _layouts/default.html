@@ -12,7 +12,7 @@
     <meta name="description" content="{{ site.description }}">
 
     <link rel="shortcut icon" href="{{ site.baseurl }}/images/favicon.ico" type="image/x-icon">
-<link rel="icon" href="{{ site.baseurl }}/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ site.baseurl }}/images/favicon.ico" type="image/x-icon">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,15 +28,15 @@
   </head>
 
   <body>
-    <div class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="{{ site.baseurl }}/index.html">
-            <img src="{{ site.baseurl }}/images/navbar.png" alt="Site logo"> {{ site.name }}
+          <a class="navbar-brand" href="{{ site.baseurl }}/">
+            <img src="{{ site.baseurl }}/images/navbar.png" alt="Site logo">&nbsp;{{ site.name }}
           </a>
         </div>
       </div>
-    </div>
+    </nav>
 
     <div id="main" role="main" class="container">
       {{ content }}
@@ -46,11 +46,11 @@
       <div class="text-center container">
         <ul class="list-inline">
           <li>
-            <a href="{{ site.baseurl }}/about">About</a>
+            <a href="{{ site.baseurl }}/about/">About</a>
           </li>
           <li>&#124;</li>
           <li>
-            <a href="{{ site.baseurl }}/archive">Archive</a>
+            <a href="{{ site.baseurl }}/archive/">Archive</a>
           </li>
         </ul>
       </div>
