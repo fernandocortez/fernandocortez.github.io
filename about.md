@@ -4,11 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Just starting in the IT field.
-
-### More Information
-
-Will be adding more as time goes by.
+My name is Fernando Cortez, and this is my blog. The postings will be infrequent, most detailing my technology projects, but some will be about any other thoughts and hobbies I might have. I hope you enjoy them.
 
 ### Contact me
 
