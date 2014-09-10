@@ -5,8 +5,23 @@
 // IMPORTS
 //
 
-@import "bootstrap-custom";
-@import "bootswatch";
+// Core variables and mixins
+@import "variables";
+@import "mixins";
+
+// Reset
+@import "normalize";
+
+// Core CSS
+@import "scaffolding";
+@import "type";
+@import "code";
+@import "grid";
+
+// Components
+@import "navbar";
+
+
 
 .date {
   font-style: italic;
@@ -16,81 +31,6 @@
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
-
-//
-// Navbars
-// --------------------------------------------------
-
-
-// Wrapper and base class
-//
-// Provide a static navbar from which we expand to create full-width, fixed, and
-// other navbar variations.
-
-.navbar {
-  position: relative;
-  min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
-  margin-bottom: $navbar-margin-bottom;
-  border: 1px solid transparent;
-
-  // Prevent floats from breaking the navbar
-  @include clearfix();
-
-  @media (min-width: $grid-float-breakpoint) {
-    border-radius: $navbar-border-radius;
-  }
-}
-
-// Navbar heading
-//
-// Groups `.navbar-brand` and `.navbar-toggle` into a single component for easy
-// styling of responsive aspects.
-
-.navbar-header {
-  @include clearfix();
-
-  @media (min-width: $grid-float-breakpoint) {
-    float: left;
-  }
-}
-
-// Brand/project name
-
-.navbar-brand {
-  float: left;
-  padding: $navbar-padding-vertical $navbar-padding-horizontal;
-  font-size: $font-size-large;
-  line-height: $line-height-computed;
-  height: $navbar-height;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
-
-  @media (min-width: $grid-float-breakpoint) {
-    .navbar > .container &,
-    .navbar > .container-fluid & {
-      margin-left: -$navbar-padding-horizontal;
-    }
-  }
-}
-
-// Default navbar
-.navbar-default {
-  background-color: $navbar-default-bg;
-  border-color: $navbar-default-border;
-
-  .navbar-brand {
-    color: $navbar-default-brand-color;
-    &:hover,
-    &:focus {
-      color: $navbar-default-brand-hover-color;
-      background-color: $navbar-default-brand-hover-bg;
-    }
-  }
-}
-
 
 //
 // .main
