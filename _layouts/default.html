@@ -1,61 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+<head>
+  <meta charset="utf-8" />
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="author" content="{{ site.name }}" />
-    <meta name="description" content="{{ site.description }}">
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
 
-    <link rel="shortcut icon" href="{{ site.baseurl }}/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="{{ site.baseurl }}/images/favicon.ico" type="image/x-icon">
+  <meta name="author" content="{{ site.name }}" />
+  <meta name="description" content="{{ site.description }}">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <link rel="shortcut icon" href="{{ site.baseurl }}/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="{{ site.baseurl }}/images/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/pure-min.css" />
+
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/grids-responsive-old-ie-min.css">
     <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/grids-responsive-min.css">
+  <!--<![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/blog-old-ie.css">
+    <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/blog.css">
+  <!--<![endif]-->
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
-  <body>
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="{{ site.baseurl }}/">
-            <img src="{{ site.baseurl }}/images/navbar.png" alt="Site logo">&nbsp;{{ site.name }}
-          </a>
-        </div>
+</head>
+
+<body>
+  <div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+      <div class="header">
+
+        <a href="{{ site.baseurl }}">
+          <h1 class="brand-title">{{ site.name }}</h1>
+        </a>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="{{ site.baseurl }}/about/" class="pure-button">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ site.baseurl }}/archive/" class="pure-button">Archive</a>
+            </li>
+          </ul>
+        </nav>
+
       </div>
-    </nav>
-
-    <div id="main" role="main" class="container">
-      {{ content }}
     </div>
 
-    <footer>
-      <div class="text-center container">
-        <ul class="list-inline">
-          <li>
-            <a href="{{ site.baseurl }}/about/">About</a>
-          </li>
-          <li>&#124;</li>
-          <li>
-            <a href="{{ site.baseurl }}/archive/">Archive</a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+    <div class="content pure-u-1 pure-u-md-3-4">
+      {{ content }}
+    </div>
+  </div>
 
-    {% include analytics.html %}
-  </body>
+  {% include analytics.html %}
+</body>
+
 </html>
